@@ -5,3 +5,15 @@
 .list:hover{
     background-color: lightgray;
 }
+
+#cityName {
+    float: left;
+}
+
+#imgMainCard{
+    float: left;
+}
+
+#temp{
+    clear: both;
+}
