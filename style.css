@@ -17,3 +17,20 @@
 #temp{
     clear: both;
 }
+
+#uvIndexText {
+    float: left;
+}
+
+#uvIndexValue {
+    color: snow;
+    float: left;
+    width: 3em;
+    text-align: center;
+    border-radius: 3px;
+    background-color: firebrick;
+}
+
+#uvIndexValue:hover {
+    background-color: orangered;
+}

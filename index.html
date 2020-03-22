@@ -26,13 +26,7 @@
                     </form>
                 </div>
                 <div class="card-body">
-                    <ul class="list-group" id="unorderedList">
-                        <!-- <li class="list-group-item list">Cras justo odio</li>
-                        <li class="list-group-item list">Dapibus ac facilisis in</li>
-                        <li class="list-group-item list">Morbi leo risus</li>
-                        <li class="list-group-item list">Porta ac consectetur ac</li>
-                        <li class="list-group-item list">Vestibulum at eros</li> -->
-                    </ul>
+                    <ul class="list-group" id="unorderedList"></ul>
                 </div>
             </div>
         </div>
@@ -45,7 +39,8 @@
                         <p class="card-text" id="temp"></p>
                         <p class="card-text" id="humidity"></p>
                         <p class="card-text" id="wind"></p>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text" id="uvIndexText">UV Index:&nbsp;</p>
+                        <p class="card-text" id="uvIndexValue"></p>
                     </div>
                 </div>
             </div>
@@ -54,45 +49,45 @@
                 <div>
                     <h3>5-Day Forecast:</h3>
                 </div>
-                <div class="card-deck">
+                <div class="card-deck forecastCard">
                     <div class="card bg-primary">
-                        <div class="card-body" style="color: snow;">
-                            <h5 class="card-title">Card title</h5>
-                            <img src="#" alt="">
-                            <p class="card-text">This card has</p>
-                            <p class="card-text">This card has</p>
+                        <div class="card-body" style="color: snow; padding-left: 5px; width: 200px;">
+                            <h6 class="card-title" id="cityForecast0"></h6>
+                            <img src="#" alt="" id="imgForecast0">
+                            <p class="card-text" id="tempForecast0" style="font-size: 14px;"></p>
+                            <p class="card-text" id="humForecast0" style="font-size: 14px;"></p>
                         </div>
                     </div>
                     <div class="card bg-primary">
-                        <div class="card-body" style="color: snow;">
-                            <h5 class="card-title">Card title</h5>
-                            <img src="#" alt="">
-                            <p class="card-text">This card has</p>
-                            <p class="card-text">This card has</p>
+                        <div class="card-body" style="color: snow; padding-left: 5px;">
+                            <h6 class="card-title" id="cityForecast1"></h6>
+                            <img src="#" alt="" id="imgForecast1">
+                            <p class="card-text" id="tempForecast1" style="font-size: 14px;"></p>
+                            <p class="card-text" id="humForecast1" style="font-size: 14px;"></p>
                         </div>
                     </div>
                     <div class="card bg-primary">
-                        <div class="card-body" style="color: snow;">
-                            <h5 class="card-title">Card title</h5>
-                            <img src="#" alt="">
-                            <p class="card-text">This card has</p>
-                            <p class="card-text">This card has</p>
+                        <div class="card-body" style="color: snow; padding-left: 5px;">
+                            <h6 class="card-title" id="cityForecast2"></h6>
+                            <img src="#" alt="" id="imgForecast2">
+                            <p class="card-text" id="tempForecast2" style="font-size: 14px;"></p>
+                            <p class="card-text" id="humForecast2" style="font-size: 14px;"></p>
                         </div>
                     </div>
                     <div class="card bg-primary">
-                        <div class="card-body" style="color: snow;">
-                            <h5 class="card-title">Card title</h5>
-                            <img src="#" alt="">
-                            <p class="card-text">This card has</p>
-                            <p class="card-text">This card has</p>
+                        <div class="card-body" style="color: snow; padding-left: 5px;">
+                            <h6 class="card-title" id="cityForecast3"></h6>
+                            <img src="#" alt="" id="imgForecast3">
+                            <p class="card-text" id="tempForecast3" style="font-size: 14px;"></p>
+                            <p class="card-text" id="humForecast3" style="font-size: 14px;"></p>
                         </div>
                     </div>
                     <div class="card bg-primary">
-                        <div class="card-body" style="color: snow;">
-                            <h5 class="card-title">Card title</h5>
-                            <img src="#" alt="">
-                            <p class="card-text">This card has</p>
-                            <p class="card-text">This card has</p>
+                        <div class="card-body" style="color: snow; padding-left: 5px;">
+                            <h6 class="card-title" id="cityForecast4"></h6>
+                            <img src="#" alt="" id="imgForecast4">
+                            <p class="card-text" id="tempForecast4" style="font-size: 14px;"></p>
+                            <p class="card-text" id="humForecast4" style="font-size: 14px;"></p>
                         </div>
                     </div>
                 </div>
