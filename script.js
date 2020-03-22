@@ -52,7 +52,7 @@ $(function () {
 
 
             $("#cityName").text(response.name + " (" + month + "/" + day + "/" + year + ")");
-            $("#imgMainCard").attr("src", "http://openweathermap.org/img/wn/" + icon + ".png");
+            $("#imgMainCard").attr("src", "https://openweathermap.org/img/wn/" + icon + ".png");
             $("#temp").text("Temperature: " + cityTemp + " °F");
             $("#humidity").text("Humidity: " + response.main.humidity + " %");
             $("#wind").text("Wind Speed: " + windSpeed + " MPH");
