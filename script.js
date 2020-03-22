@@ -20,14 +20,16 @@ $(function () {
                 var icon = response.weather[0].icon;
                 var cityLat = response.coord.lat;
                 var cityLon = response.coord.lon;
-                // var date = response.
-                console.log(response);
+                var dateMili = new Date(response.dt * 1000);
+                var month = dateMili.getMonth();
+                var day = dateMili.getDate();
+                var year = dateMili.getFullYear();
 
                 cityTemp = (((cityTemp - 273.15) * 1.8) + 32).toFixed(2);
                 windSpeed = (windSpeed * 2.237).toFixed(1);
 
 
-                $("#cityName").text(response.name);
+                $("#cityName").text(response.name + " (" + month + "/" + day + "/" + year + ")");
                 $("#imgMainCard").attr("src", "http://openweathermap.org/img/wn/" + icon + ".png");
                 $("#temp").text("Temperature: " + cityTemp + " °F");
                 $("#humidity").text("Humidity: " + response.main.humidity + " %");
