@@ -7,7 +7,6 @@ $(function () {
 
         searchInput = $("#searchInput").val();
         var dataIndex = searchInput;
-        console.log("data index: " + dataIndex);
 
         var newLi = $("<button>");
         newLi.addClass("list-group-item list");
@@ -24,7 +23,6 @@ $(function () {
         }
         $("#unorderedList button").on("click", function () {
             searchInput = $(this).attr("data-value");
-            console.log("listBtnSearchInput: " + searchInput);
     
             getCityInfo();
         })
