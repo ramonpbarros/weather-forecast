@@ -108,11 +108,11 @@ $(function () {
                     dateId.text(dateVar);
                 }
 
-                $("#imgForecast0").attr("src", "http://openweathermap.org/img/wn/" + forecastIcon0 + ".png");
-                $("#imgForecast1").attr("src", "http://openweathermap.org/img/wn/" + forecastIcon1 + ".png");
-                $("#imgForecast2").attr("src", "http://openweathermap.org/img/wn/" + forecastIcon2 + ".png");
-                $("#imgForecast3").attr("src", "http://openweathermap.org/img/wn/" + forecastIcon3 + ".png");
-                $("#imgForecast4").attr("src", "http://openweathermap.org/img/wn/" + forecastIcon4 + ".png");
+                $("#imgForecast0").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon0 + ".png");
+                $("#imgForecast1").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon1 + ".png");
+                $("#imgForecast2").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon2 + ".png");
+                $("#imgForecast3").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon3 + ".png");
+                $("#imgForecast4").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon4 + ".png");
 
                 $("#humForecast0").text("Humidity: " + forecastResponse.list[5].main.humidity + "%");
                 $("#humForecast1").text("Humidity: " + forecastResponse.list[13].main.humidity + "%");
