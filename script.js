@@ -2,41 +2,32 @@ $(function () {
 
     var searchInput;
     var citiesArray = [];
-    console.log(citiesArray);
-    creatCityBtns();
 
+    creatCityBtns();
 
     $("#searchBtn").on("click", function (e) {
         e.preventDefault();
 
         searchInput = $("#searchInput").val();
         var dataIndex = searchInput;
-        citiesArray.push(searchInput);
-        console.log(citiesArray);
-
-        var newLi = $("<button>");
-        newLi.addClass("list-group-item list");
-        newLi.attr({
-            style: "text-align: left",
-            "data-value": dataIndex
-        });
-        newLi.text(searchInput);
-
-        $("#unorderedList").append(newLi);
-
-        localStorage.setItem("citiesArray", citiesArray);
-
-        // var listBtnText = (newLi[0].textContent);
-        // localStorage.setItem(dataIndex, listBtnText);
-
-        // var storedItems = JSON.parse(localStorage.getItem("listBtnText"));
-        // console.log(storedItems)
-
-        $("#content").css("visibility", "visible");
 
         if (searchInput === "") {
             return;
         } else {
+            var newLi = $("<button>");
+            newLi.addClass("list-group-item list");
+            newLi.attr({
+                style: "text-align: left",
+                "data-value": dataIndex
+            });
+            newLi.text(searchInput);
+
+            $("#unorderedList").append(newLi);
+
+            $("#content").css("visibility", "visible");
+            citiesArray.push(searchInput);
+            localStorage.setItem("citiesArray", citiesArray);
+
             getCityInfo();
         }
 
