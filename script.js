@@ -58,6 +58,12 @@ $(function () {
                 $("#unorderedList").append(newBtn);
             }
         }
+        $("#unorderedList button").on("click", function () {
+            searchInput = $(this).attr("data-value");
+
+            getCityInfo();
+            $("#content").css("visibility", "visible");
+        })
     };
 
     function getCityInfo() {
