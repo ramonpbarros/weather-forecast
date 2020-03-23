@@ -3,25 +3,31 @@ $(function () {
     var searchInput;
     var citiesArray = [];
     console.log(citiesArray);
+    creatCityBtns();
+
 
     $("#searchBtn").on("click", function (e) {
         e.preventDefault();
 
         searchInput = $("#searchInput").val();
         var dataIndex = searchInput;
+        citiesArray.push(searchInput);
+        console.log(citiesArray);
 
         var newLi = $("<button>");
         newLi.addClass("list-group-item list");
         newLi.attr({
             style: "text-align: left",
-            "data-value": dataIndex 
+            "data-value": dataIndex
         });
         newLi.text(searchInput);
 
         $("#unorderedList").append(newLi);
 
-        var listBtnText = (newLi[0].textContent);
-        localStorage.setItem(dataIndex, listBtnText);
+        localStorage.setItem("citiesArray", citiesArray);
+
+        // var listBtnText = (newLi[0].textContent);
+        // localStorage.setItem(dataIndex, listBtnText);
 
         // var storedItems = JSON.parse(localStorage.getItem("listBtnText"));
         // console.log(storedItems)
@@ -40,6 +46,28 @@ $(function () {
             getCityInfo();
         })
     });
+
+    function creatCityBtns() {
+        var storedItems = localStorage.getItem("citiesArray");
+
+        if (storedItems === null) {
+        } else {
+            storedItems = storedItems.split(',');
+
+            for (var i = 0; i < storedItems.length; i++) {
+                searchInput = storedItems[i];
+                dataIndex = searchInput;
+                var newBtn = $("<button>");
+                newBtn.addClass("list-group-item list");
+                newBtn.attr({
+                    style: "text-align: left",
+                    "data-value": dataIndex
+                });
+                newBtn.text(searchInput);
+                $("#unorderedList").append(newBtn);
+            }
+        }
+    };
 
     function getCityInfo() {
 
