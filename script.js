@@ -1,6 +1,8 @@
 $(function () {
 
     var searchInput;
+    var citiesArray = [];
+    console.log(citiesArray);
 
     $("#searchBtn").on("click", function (e) {
         e.preventDefault();
@@ -10,10 +12,20 @@ $(function () {
 
         var newLi = $("<button>");
         newLi.addClass("list-group-item list");
-        newLi.attr({ style: "text-align: left", "data-value": dataIndex });
+        newLi.attr({
+            style: "text-align: left",
+            "data-value": dataIndex 
+        });
         newLi.text(searchInput);
 
         $("#unorderedList").append(newLi);
+
+        var listBtnText = (newLi[0].textContent);
+        localStorage.setItem(dataIndex, listBtnText);
+
+        // var storedItems = JSON.parse(localStorage.getItem("listBtnText"));
+        // console.log(storedItems)
+
         $("#content").css("visibility", "visible");
 
         if (searchInput === "") {
@@ -21,13 +33,13 @@ $(function () {
         } else {
             getCityInfo();
         }
+
         $("#unorderedList button").on("click", function () {
             searchInput = $(this).attr("data-value");
-    
+
             getCityInfo();
         })
     });
-
 
     function getCityInfo() {
 
